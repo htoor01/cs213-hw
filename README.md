@@ -57,4 +57,4 @@ Design includes:
 ### Deliverable
 UML class diagram with multiplicities, access levels, and supplementary data structure table showing Java collections for associations.
 
-**Location**: `uml-design/uml-design.md`
+**Location**: `uml-design/forums_uml.md`
