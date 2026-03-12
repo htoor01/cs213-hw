@@ -8,8 +8,8 @@ classDiagram
         +addForum(Forum f) void
         +addUser(User u) void
         +getForum(String forumId) Forum
-        +getForums() ArrayList~Forum~
-        +getRegisteredUsers() ArrayList~User~
+        +getForums() List~Forum~
+        +getRegisteredUsers() List~User~
     }
 
     class User {
@@ -24,7 +24,7 @@ classDiagram
         +getName() String
         +getEmail() String
         +getUserId() String
-        +getJoinedForums() ArrayList~Forum~
+        +getJoinedForums() List~Forum~
     }
 
     class Forum {
@@ -37,13 +37,13 @@ classDiagram
         +removeMember(User u) boolean
         +createThread(String subject, String content, User author) Thread
         +postMessage(Message m) boolean
-        +getAllMessages() ArrayList~Message~
-        +filterMessagesByAuthor(User author) ArrayList~Message~
-        +filterMessagesByThread(Thread thread) ArrayList~Message~
-        +filterMessagesByDate(Date date) ArrayList~Message~
-        +filterMessagesByDateRange(Date start, Date end) ArrayList~Message~
-        +sortMessagesByAuthor(ArrayList~Message~ msgs) ArrayList~Message~
-        +sortMessagesByDate(ArrayList~Message~ msgs, boolean ascending) ArrayList~Message~
+        +getAllMessages() List~Message~
+        +filterMessagesByAuthor(User author) List~Message~
+        +filterMessagesByThread(Thread thread) List~Message~
+        +filterMessagesByDate(Date date) List~Message~
+        +filterMessagesByDateRange(Date start, Date end) List~Message~
+        +sortMessagesByAuthor(List~Message~ msgs) List~Message~
+        +sortMessagesByDate(List~Message~ msgs, boolean ascending) List~Message~
         +reviewMessage(Message m) void
         +approveMessage(Message m) boolean
         +denyMessage(Message m) boolean
@@ -56,9 +56,9 @@ classDiagram
         #setModerator(User u) boolean
         +getOwner() User
         +getModerator() User
-        +getMembers() ArrayList~User~
-        +getThreads() ArrayList~Thread~
-        +getPendingMessages() ArrayList~Message~
+        +getMembers() List~User~
+        +getThreads() List~Thread~
+        +getPendingMessages() List~Message~
     }
 
     class Thread {
@@ -68,7 +68,7 @@ classDiagram
         -Forum forum
         +addMessage(Message m) void
         +getInitiatingMessage() Message
-        +getMessages() ArrayList~Message~
+        +getMessages() List~Message~
         +getSubject() String
         +getForum() Forum
         +getThreadId() String
